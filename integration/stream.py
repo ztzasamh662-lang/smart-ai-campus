@@ -28,3 +28,11 @@ def fake_camera_stream():
 
 if __name__ == "__main__":
     fake_camera_stream()
+from integration.camera_mock import get_mock_camera
+
+def start_stream():
+    cap = get_mock_camera()
+    print("Mock camera stream ready")
+
+if __name__ == "__main__":
+    start_stream()
