@@ -1,38 +1,12 @@
-from camera_mock import get_mock_camera
-
-def start_stream():
-    cap = get_mock_camera()
-
-    while True:
-        ret, frame = cap.read()
-        if not ret:
-            break
-
-        print("Frame received")
-
-    cap.release()
-
-if __name__ == "__main__":
-    start_stream()
+from camera_mock import get_frame
 import time
 
-def fake_camera_stream():
-    """
-    Simulates camera frames (no real camera)
-    """
-    frame_id = 0
-    while True:
-        frame_id += 1
-        print(f"[STREAM] Sending fake frame #{frame_id}")
+def send_to_ai(frame):
+    print(f"[TO AI] Frame {frame['frame_id']} ready")
+
+if __name__ == "__main__":
+    for _ in range(5):
+        frame = get_frame()
+        print("[STREAM] Sending", frame)
+        send_to_ai(frame)
         time.sleep(1)
-
-if __name__ == "__main__":
-    fake_camera_stream()
-from integration.camera_mock import get_mock_camera
-
-def start_stream():
-    cap = get_mock_camera()
-    print("Mock camera stream ready")
-
-if __name__ == "__main__":
-    start_stream()
