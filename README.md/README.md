@@ -6,11 +6,19 @@ This project is an AI-based campus management system that handles:
 - Exam monitoring and cheating detection
 - Admin dashboard for monitoring and alerts
 
-## Current Status (Week 1 & 2)
+## Current Status (Week 1)
 - Project structure initialized
 - GitHub repository connected
 - Integration module created
 - Mock camera stream implemented (no real camera yet)
+## Integration (Week 2)
+
+- Added mock camera stream (no real camera yet)
+- `camera_mock.py` generates fake frames for testing
+- `stream.py` simulates continuous frame streaming
+- Temporary `api_client.py` used as a placeholder
+  (will be replaced with real Backend API once available)
+
 
 ## Integration Module
 The integration folder contains mock implementations to simulate camera input.
