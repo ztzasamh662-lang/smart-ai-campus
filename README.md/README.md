@@ -11,14 +11,14 @@ This project is an AI-based campus management system that handles:
 - GitHub repository connected
 - Integration module created
 - Mock camera stream implemented (no real camera yet)
-## Integration (Week 2)
 
-- Added mock camera stream (no real camera yet)
-- `camera_mock.py` generates fake frames for testing
-- `stream.py` simulates continuous frame streaming
-- Temporary `api_client.py` used as a placeholder
-  (will be replaced with real Backend API once available)
+## Integration (Weeks 2–3)
 
+- Implemented mock camera stream (no real camera yet)
+- `camera_mock.py` generates fake frames
+- `stream.py` sends frames in a loop
+- `api_client.py` simulates backend API calls
+- Ready to replace mock API with real backend
 
 ## Integration Module
 The integration folder contains mock implementations to simulate camera input.
